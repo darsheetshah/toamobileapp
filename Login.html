@@ -10,13 +10,14 @@
 </head>
 
 <body>
+    <form>
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="span1 logo">
+            <div class="span1">
                 <img src="images/logo.jpg">        
             </div>
             <div class="span8">
-                <p class="companyname" align="center"> Sun-Net </p>
+                <label class="companyname" align="center"> Sun-Net </label>
             </div>
         </div>
         <div class="row-fluid">
@@ -24,23 +25,36 @@
                 <img src="images/PowerLinesTOA.jpg">
             </div>   
         </div>
-        <div class="row-fluid visible-desktop">
+        <div class="row-fluid visible-desktop" align="center">
+            <div class="row-fluid span9">
             <br>
             <b>Username:</b>
             <input type="text" id="username" class="input-small">
             <b>Password:</b>
             <input type="password" id="password" class="input-small">
-            <br>    
+            <br>
+            (Username and password are case sensitive)
+            <br>
+            <div class="row-fluid">
+            <div class="span5 offset4" align="right">
+                <input type="submit" value=Login>
+            </div>
+            <div class="span3" align = "right">
+                <input type="button" value="Exit"></div>
+            </div>
+            </div>
         </div>
-        <div class="row-fluid visible-phone">
+        <div class="row-fluid hidden-desktop" align="center">
             <br>
             <input type="text" class="input-small" id="username" placeholder="Username">
             <input type="password" class="input-small" id="password" placeholder="Password">
             <br>
+            <input type="submit" value=Login>
+            <br>
         </div>
-    
-    
+        
     </div>
+    </form>
     
 </body>
 </html>
