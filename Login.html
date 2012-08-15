@@ -7,10 +7,38 @@
     <link rel="stylesheet" href="libs/sunnet/toa.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-responsive.min.css">
+    <script type="text/javascript">
+        function loginValidateDesktop()
+        {
+            var username=document.loginDesktop.username.value;
+            var password=document.loginDesktop.password.value;
+            if(username=="")
+            return false;
+            else if(password==undefined)
+            return false;
+            else if(username=="daniel" && password=="welcome")
+            return true;
+            else
+            return false;
+        }
+        function loginValidateMobile()
+        {
+            var username=document.loginMobile.username.value;
+            var password=document.loginMobile.password.value;
+            if(username=="")
+            return false;
+            else if(password==undefined)
+            return false;
+            else if(username=="daniel" && password=="welcome")
+            return true;
+            else
+            return false;
+        }
+    </script>
 </head>
 
 <body>
-    <form>
+    
     <div class="container-fluid">
         <div class="row-fluid">
             <div class="span1">
@@ -26,6 +54,7 @@
             </div>   
         </div>
         <div class="row-fluid visible-desktop" align="center">
+            <form name="loginDesktop" action="NewOutage.html" onsubmit="return loginValidateDesktop()" method="post">
             <div class="row-fluid span9">
             <br>
             <b>Username:</b>
@@ -43,18 +72,21 @@
                 <input type="button" value="Exit"></div>
             </div>
             </div>
+            </form>
         </div>
         <div class="row-fluid hidden-desktop" align="center">
+            <form name="loginMobile" action="NewOutage.html" onsubmit="return loginValidateMobile()" method="post">
             <br>
             <input type="text" class="input-small" id="username" placeholder="Username">
             <input type="password" class="input-small" id="password" placeholder="Password">
             <br>
             <input type="submit" value=Login>
             <br>
+            </form>
         </div>
         
     </div>
-    </form>
+    
     
 </body>
 </html>
