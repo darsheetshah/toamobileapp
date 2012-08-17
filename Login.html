@@ -41,10 +41,10 @@
     
     <div class="container-fluid">
         <div class="row-fluid">
-            <div class="span1">
+            <div >
                 <img src="images/logo.jpg">        
             </div>
-            <div class="span8">
+            <div align="center">
                 <label class="companyname" align="center"> Sun-Net </label>
             </div>
         </div>
@@ -54,7 +54,7 @@
             </div>   
         </div>
         <div class="row-fluid visible-desktop" align="center">
-            <form name="loginDesktop" action="NewOutage.html" onsubmit="return loginValidateDesktop()"><!-- method="post">-->
+            <form name="loginDesktop" action="OutageList.html" onsubmit="return loginValidateDesktop()"><!-- method="post">-->
             <div class="row-fluid span9">
             <br>
             <b>Username:</b>
@@ -66,21 +66,21 @@
             <br>
             <div class="row-fluid">
             <div class="span5 offset4" align="right">
-                <input type="submit" value=Login>
+                <input type="submit" value=Login class="btn btn-primary">
             </div>
             <div class="span3" align = "right">
-                <input type="button" value="Exit"></div>
+                <input type="button" value="Exit" class="btn"></div>
             </div>
             </div>
             </form>
         </div>
         <div class="row-fluid hidden-desktop" align="center">
-            <form name="loginMobile" action="NewOutage.html" onsubmit="return loginValidateMobile()"><!--</form> method="post">-->
+            <form name="loginMobile" action="OutageList.html" onsubmit="return loginValidateMobile()" method="post">
             <br>
             <input type="text" class="input-small" id="username" placeholder="Username">
             <input type="password" class="input-small" id="password" placeholder="Password">
             <br>
-            <input type="submit" value=Login>
+            <input type="submit" value=Login class="btn btn-primary">
             <br>
             </form>
         </div>
