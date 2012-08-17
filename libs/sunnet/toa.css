@@ -9,3 +9,8 @@ background-color:#EDEDED;
 body{
     padding-top: 50px;
 }
+
+input{
+    margin-top:2px;
+    margin-bottom: 3px !important; 
+}

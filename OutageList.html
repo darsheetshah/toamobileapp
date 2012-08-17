@@ -34,18 +34,32 @@
 
     <div class="container-fluid"
     <div style="border:1px groove; padding-top: 4px;">
-        <from name="sort" class="form-inline">
-        <div class="span3">
+        <form name="sort" class="form-inline">
+        <div class="span3 controls">
+            <label for="listtype">List Type</label>
+            <select id="listtype" class="input-medium">
+                <option selected="selected">All</option>
+                <option>Received</option>
+                <option>Pending</option>
+                <option>Unaccepted</option>
+                <option>Under Review</option>
+                <option>Completed</option>
+                <option>Start or End</option>
+                <option>Posponed</option>
+                <option>FYI</option>
+            </select>
+        </div>
+        <div class="span2">
             <label>From</label>
             <input type="text" class="input-small">        
         </div>
-        <div class="span3">
+        <div class="span2">
             <label>To</label>
             <input type="text" class="input-small">        
         </div>
-        <div class="span6">
+        <div class="span4">
             <label>Primary Sort</label>
-            <input type="text" class="input">        
+            <input type="text" class="input-medium">        
         </div>
         </from> 
     </div>
