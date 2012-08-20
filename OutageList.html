@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <title> Home </title>
@@ -7,17 +6,20 @@
 <link rel="stylesheet" href="libs/sunnet/toa.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-responsive.min.css">
+    <style type="text/css" title="currentStyle">
+			@import "libs/DataTables/media/css/demo_page.css";
+			@import "libs/DataTables/media/css/demo_table.css";
+</style>
+    
 </head>
-<body>
+<body id="dt_example">
 <div class="navbar navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-           
-                <ul class="nav nav-pills">
+            <ul class="nav nav-pills">
                 <li class="active"> <a href="OutageList.html">Outage Request List</a></li>
                 <li><a href="NewOutage.html">New Outage Request</a></li>
-                </ul>
-            
+            </ul>
         </div>
     </div>
 </div>
@@ -29,11 +31,12 @@
                 <b>Outage Request List</b>
             </div>
         Welcome to TOA. Hope you have a great experience
+        </div>
     </header>
 </div>
 
-    <div class="container-fluid"
-    <div style="border:1px groove; padding-top: 4px;">
+<div class="container-fluid"  style="border:1px solid gray;" >
+    
         <form name="sort" class="form-inline">
         <div class="span3 controls">
             <label for="listtype">List Type</label>
@@ -61,12 +64,72 @@
             <label>Primary Sort</label>
             <input type="text" class="input-medium">        
         </div>
-        </from> 
-    </div>
+        </form> 
 </div>
+<br>
+<div id="container" class="visible-desktop">
+    <table id="outages" class="table">
+        <thead>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>P</td><td>45</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+            <tr>
+                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="libs/DataTables/media/js/jquery.js"></script>
+<script type="text/javascript" src="libs/DataTables/media/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#outages").dataTable({
+            "bAutoWidth":false,
+            "bProcessing":true,
+            "bLengthChange":false,
+            "bSort":true,
+            "bScrollCollapse":true,
+            "sScrollY": "200px",
+            "bPaginate": false
+            });
+    });
     
-    
-    
+</script>
 
 </body>
 </html>
