@@ -8,9 +8,58 @@ background-color:#EDEDED;
 
 body{
     padding-top: 50px;
+    min-height: 250px;
 }
 
 input{
     margin-top:2px;
     margin-bottom: 2px !important; 
+}
+
+#filtering{
+    min-width: 250px;
+}
+
+table#outages tbody#outagesbody td#P{
+    max-width:15px;
+}
+
+table#outages tbody#outagesbody td#request{
+    max-width:50px;
+}
+
+table#outages tbody#outagesbody td#start{
+    max-width:150px;
+}
+
+table#outages tbody#outagesbody td#end{
+    max-width:150px;
+}
+
+table#outages tbody#outagesbody td#voltage{
+    max-width:50px;
+}
+
+table#outages tbody#outagesbody td#linedevice{
+    max-width:150px;
+}
+
+table#outages tbody#outagesbody td#station{
+    max-width:120px;
+}
+
+table#outages tbody#outagesbody td#district{
+    max-width:75px;
+}
+
+table#outages tbody#outagesbody td#status{
+    max-width:75px;
+}
+
+table#outages tbody#outagesbody td#points{
+    max-width:250px;
+}
+
+table#outages tbody#outagesbody td#switching{
+    max-width:25px;
 }

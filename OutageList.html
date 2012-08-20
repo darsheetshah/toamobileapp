@@ -35,7 +35,7 @@
     </header>
 </div>
 
-<div class="container-fluid"  style="border:1px solid gray;" >
+<div id="filtering" class="container-fluid"  style="border:1px solid gray;" >
     
         <form name="sort" class="form-inline">
         <div class="span3 controls">
@@ -74,45 +74,132 @@
                 <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="outagesbody">
             <tr>
-                <td>P</td><td>45</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Ipsupm LoremIpsum Lorem Imsum</td><td id="station">Albany, Beta, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta sum Lorem Imsum</td><td id="station">Albany, Beta, Oelin</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Ium Lorem Imsum</td><td id="station">Aany, Beta, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Ipspsum Lorem Imsum</td><td id="station">Albany, Beta, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and s Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta LoLoremIpsum Lorem Imsum</td><td id="station">A Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1  other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lom LoremIpsum Lorem Imsum</td><td id="station">, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open  and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Ipssum Lorem Imsum</td><td id="station">Albany, Beta, </td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Ipsupmum Lorem Imsum</td><td id="station"> Beta, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem IemIpsum Lorem Imsum</td><td id="station"> Beta, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Ipsuum Lorem Imsum</td><td id="station">Albany, Beta, Oelwein</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem Isupm LoremIpsum Lorem Imsum</td><td id="station">Albany, B</td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <td id="P"> </td><td id="request">12-00023</td><td id="start">05/25/2012 1600</td><td id="end">05/25/2012 1700</td><td id="voltage">230,13.8</td><td id="linedevice">Aplha Beta Lorem emIpsum Lorem </td><td id="station">Albany, Beta, </td><td id="district">East, West</td><td id="status">Received</td><td id="points">Open BK1 BK2 and other breakages Lorem Ipsum</td><td id="switching">CL</td>
             </tr>
         </tbody>
     </table>
+</div>
+<div class="hidden-desktop" class="container-fluid">
+    <div>
+    <div>
+        <div style="float:left;"> P : </div>
+        <div > P </div>
+    </div>
+    <div>
+        <div style="float:left;"> Request # : </div>
+        <div> 45 </div>
+    </div>
+    <div>
+        <div style="float:left;"> Sched start : </div>
+        <div> 12:00 pm </div>
+    </div>
+    <div>
+        <div style="float:left;"> Sched End : </div>
+        <div> 5.00 pm </div>
+    </div>
+    <div>
+        <div style="float:left;"> Voltages :</div>
+        <div> 230</div>
+    </div>
+    <div>
+        <div style="float:left;">Line/Device : </div>
+        <div>Station </div>
+    </div>
+    <div>
+        <div style="float:left;"> District :</div>
+        <div> San Jose
+    </div>
+    <div>
+        <div style="float:left;"> Status : </div>
+        <div> Received </div>
+    </div>
+    <div>
+        <div style="float:left;"> Point of clearance : </div>
+        <div> Test point</div>
+    </div>
+    <div>
+        <div style="float:left;">Type of switching : </div>
+        <div>Test type</div>
+    </div>
+    <hr>
+    </div>
+    <div><div>
+        <div style="float:left;"> P : </div>
+        <div> P </div>
+    </div>
+    <div>
+        <div style="float:left;"> Request # : </div>
+        <div> 45 </div>
+    </div>
+    <div>
+        <div style="float:left;"> Sched start : </div>
+        <div> 12:00 pm </div>
+    </div>
+    <div>
+        <div style="float:left;"> Sched End : </div>
+        <div> 5.00 pm </div>
+    </div>
+    <div>
+        <div style="float:left;"> Voltages :</div>
+        <div> 230</div>
+    </div>
+    <div>
+        <div style="float:left;">Line/Device : </div>
+        <div>Station </div>
+    </div>
+    <div>
+        <div style="float:left;"> District :</div>
+        <div> San Jose
+    </div>
+    <div>
+        <div style="float:left;"> Status : </div>
+        <div> Received </div>
+    </div>
+    <div>
+        <div style="float:left;"> Point of clearance : </div>
+        <div> Test point</div>
+    </div>
+    <div>
+        <div style="float:left;">Type of switching : </div>
+        <div>Test type</div>
+    </div>
+    <hr>
+    </div>
 </div>
 <script type="text/javascript" src="libs/DataTables/media/js/jquery.js"></script>
 <script type="text/javascript" src="libs/DataTables/media/js/jquery.dataTables.js"></script>
