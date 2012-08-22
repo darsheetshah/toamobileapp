@@ -101,3 +101,7 @@
 	width: 100%;
 	overflow: auto;
 }
+
+.dataTables_scrollHeadInner{
+width : 100% !important;
+}

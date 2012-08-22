@@ -63,3 +63,7 @@ table#outages tbody#outagesbody td#points{
 table#outages tbody#outagesbody td#switching{
     max-width:25px;
 }
+
+.table .dataTable{
+width:100% !important;
+}
