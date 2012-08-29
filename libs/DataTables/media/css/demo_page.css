@@ -8,7 +8,7 @@
 
 
 #dt_example #container {
-	width: 1200px;
+	width: 100%;
 	margin: 30px auto;
 	padding: 0;
 }
@@ -102,6 +102,12 @@
 	overflow: auto;
 }
 
-.dataTables_scrollHeadInner{
-width : 100% !important;
+
+
+thead#outageshead th#P{
+width : 3%;
+}
+
+thead#outageshead th#request{
+width : 7%;
 }

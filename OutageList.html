@@ -9,76 +9,7 @@
     <style type="text/css" title="currentStyle">
 			@import "libs/DataTables/media/css/demo_page.css";
 			@import "libs/DataTables/media/css/demo_table.css";
-
-	@media 
-	only screen and (max-width: 760px),
-	(min-device-width: 768px) and (max-device-width: 1024px)  {
-	
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr { 
-			display: block; 
-		}
-		
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr { 
-			position: absolute;
-			top: -9999px;
-			left: -9999px;
-		}
-		
-		tr { border: 1px solid #ccc; }
-		
-		td { 
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee; 
-			position: relative;
-			padding-left: 50%; 
-		}
-		
-		td:before { 
-			/* Now like a table header */
-			position: absolute;
-			/* Top/left values mimic padding */
-			top: 6px;
-			left: 6px;
-			width: 45%; 
-			padding-right: 10px; 
-			white-space: nowrap;
-		}
-		
-		/*
-		Label the data
-		*/
-		td:nth-of-type(1):before { content: "First Name"; }
-		td:nth-of-type(2):before { content: "Last Name"; }
-		td:nth-of-type(3):before { content: "Job Title"; }
-		td:nth-of-type(4):before { content: "Favorite Color"; }
-		td:nth-of-type(5):before { content: "Wars of Trek?"; }
-		td:nth-of-type(6):before { content: "Porn Name"; }
-		td:nth-of-type(7):before { content: "Date of Birth"; }
-		td:nth-of-type(8):before { content: "Dream Vacation City"; }
-		td:nth-of-type(9):before { content: "GPA"; }
-		td:nth-of-type(10):before { content: "Arbitrary Data"; }
-	}
-	
-	/* Smartphones (portrait and landscape) ----------- */
-	@media only screen
-	and (min-device-width : 320px)
-	and (max-device-width : 480px) {
-		body { 
-			padding: 0; 
-			margin: 0; 
-			width: 320px; }
-		}
-	
-	/* iPads (portrait and landscape) ----------- */
-	@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-		body { 
-			width: 495px; 
-		}
-	}
-	
+			@import "libs/DataTables/extras/ColReorder/media/css/ColReorder.css";
 </style>
     
 </head>
@@ -137,11 +68,11 @@
         </form> 
 </div>
 <br>
-<div id="container" class="visible-desktop">
+<div id="container" class="container-fluid">
     <table id="outages" class="table">
-        <thead>
+        <thead id="outageshead">
             <tr>
-                <td>P</td><td>Request #</td><td>Sched Start</td><td>Sched End</td><td>Voltage(s)</td><td>Line/Device</td><td>Station(s)</td><td>District(s)</td><td>Status</td><td>Point(s) of clearance</td><td>Type of switching</td>
+                <th id="P" class="p">P</th><th id="request">Request #</th><th id="start">Sched Start</th><th id="end">Sched End</th><th id="voltage">Voltage(s)</th><th id="linedevice">Line/Device</th><th id="station">Station(s)</th><th id="district">District(s)</th><th id="status">Status</th><th id="points">Point(s) of clearance</th><th id="switching">Type of switching</th>
             </tr>
         </thead>
         <tbody id="outagesbody">
@@ -184,7 +115,7 @@
         </tbody>
     </table>
 </div>
-<div class="hidden-desktop" class="container-fluid">
+<div class="container-fluid hidden">
     <div>
     <div>
         <div style="float:left;"> P : </div>
@@ -273,19 +204,74 @@
 </div>
 <script type="text/javascript" src="libs/DataTables/media/js/jquery.js"></script>
 <script type="text/javascript" src="libs/DataTables/media/js/jquery.dataTables.js"></script>
+<script class="jsbin" src="http://datatables.net/download/build/jquery.dataTables.nightly.js"></script>
+<script type="text/javascript" src="libs/DataTables/extras/ColReorderWithResize.js"></script>
+<script type="text/javascript" src="libs/DataTables/extras/ColVis/media/js/ColVis.js"></script>
+
+
 <script type="text/javascript">
-    $(document).ready(function(){
-        $("#outages").dataTable({
-           "bAutoWidth":false,
+    var oTable;
+	$(document).ready(function(){
+        oTable = $("#outages").dataTable({
+           "sDom": 'C<"clear">Rlfrtip',
+		   //"sDom":"Rlfrtip",
+		   "bAutoWidth":false,
            "bProcessing":true,
            "bLengthChange":false,
            "bSort":true,
            "bScrollCollapse":true,
            "sScrollY": "200px",
-           "bPaginate": false
+		   
+		   "aoColumnDefs":[{
+		   "sWidth":"100px", aTargets:["pabc"]}],
+		   //"sDom": 'C<"clear">lfrtip'
         });
-    });
     
+	//setInterval(alert("hello"), 3000);
+	//setInterval($("#outages").fnAdjustColumnSizing(), 3000);
+	
+	//dothis();
+	
+	
+	
+});
+    
+	/*function dothis(){
+	oTable.fnAdjustColumnSizing();
+	$(document).ready( function () {
+	$('#example').dataTable( {
+		"sDom": 'C<"clear">lfrtip'
+	} );
+} );
+//setTimeout(arguments.callee, 10000);
+}*/
+	
+	$(window).resize(function () {
+$(".table .dataTable").css("width","100px");
+/*	$("thead#outageshead th#P").css("width", $('tbody#outagesbody td#P').width());
+$("thead#outageshead th#request").css("width", $('tbody#outagesbody td#request').width());
+$("thead#outageshead th#start").css("width", $('tbody#outagesbody td#start').width());
+$("thead#outageshead th#end").css("width", $('tbody#outagesbody td#end').width());
+$("thead#outageshead th#voltage").css("width", $('tbody#outagesbody td#voltage').width());
+$("thead#outageshead th#linedevice").css("width", $('tbody#outagesbody td#linedevice').width());
+$("thead#outageshead th#station").css("width", $('tbody#outagesbody td#station').width());
+$("thead#outageshead th#district").css("width", $('tbody#outagesbody td#district').width());
+$("thead#outageshead th#status").css("width", $('tbody#outagesbody td#status').width());
+$("thead#outageshead th#points").css("width", $('tbody#outagesbody td#points').width());
+$("thead#outageshead th#switching").css("width", $('tbody#outagesbody td#switching').width());*/
+oTable.fnAdjustColumnSizing();
+
+ });
+	
+	
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$("button.ColVis_Button").addClass("btn");
+$("div.ColVis").attr("align","right");
+});
+
 </script>
 
 </body>
