@@ -69,7 +69,7 @@
 </div>
 <br>
 <div id="container" class="container-fluid">
-    <table id="outages" class="table">
+    <table id="outages" class="">
         <thead id="outageshead">
             <tr>
                 <th id="P" class="p">P</th><th id="request">Request #</th><th id="start">Sched Start</th><th id="end">Sched End</th><th id="voltage">Voltage(s)</th><th id="linedevice">Line/Device</th><th id="station">Station(s)</th><th id="district">District(s)</th><th id="status">Status</th><th id="points">Point(s) of clearance</th><th id="switching">Type of switching</th>
@@ -273,6 +273,23 @@ $("div.ColVis").attr("align","right");
 });
 
 </script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("div.dataTables_scrollHead").css("overflow","auto");
+$("div.dataTables_scrollBody").attr("onscroll","scrollHead()");
+$("div.dataTables_scrollHead").wrap('<div id="wrapper" style="overflow:hidden; height:18px" />');
+});
+
+function scrollHead()
+{
+//alert("successful");
+	var top = $("div.dataTables_scrollHead");
+	var bottom = $("div.dataTables_scrollBody");
+		top.scrollLeft(bottom.scrollLeft());
+}
+</script>
+
+
 
 </body>
 </html>
