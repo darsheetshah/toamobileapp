@@ -31,14 +31,14 @@
             <div class="container" align="center">
                 <b>Outage Request List</b>
             </div>
-        Welcome to TOA. Hope you have a great experience
+         Welcome to TOA. Hope you have a great experience
         </div>
     </header>
 </div>
 
 <div id="filtering" class="container-fluid"  style="border:1px solid gray;" >
     
-        <form name="sort" class="form-inline">
+    <form name="sort" class="form-inline">
         <div class="span3 controls">
             <label for="listtype">List Type</label>
             <select id="listtype" class="input-medium">
@@ -65,7 +65,7 @@
             <label>Primary Sort</label>
             <input type="text" class="input-medium">        
         </div>
-        </form> 
+    </form> 
 </div>
 <br>
 <div id="container" class="container-fluid">
@@ -226,70 +226,47 @@
 		   "sWidth":"100px", aTargets:["pabc"]}],
 		   //"sDom": 'C<"clear">lfrtip'
         });
+	});
     
-	//setInterval(alert("hello"), 3000);
-	//setInterval($("#outages").fnAdjustColumnSizing(), 3000);
-	
-	//dothis();
-	
-	
-	
-});
-    
-	/*function dothis(){
-	oTable.fnAdjustColumnSizing();
-	$(document).ready( function () {
-	$('#example').dataTable( {
-		"sDom": 'C<"clear">lfrtip'
-	} );
-} );
-//setTimeout(arguments.callee, 10000);
-}*/
-	
 	$(window).resize(function () {
-$(".table .dataTable").css("width","100px");
-/*	$("thead#outageshead th#P").css("width", $('tbody#outagesbody td#P').width());
-$("thead#outageshead th#request").css("width", $('tbody#outagesbody td#request').width());
-$("thead#outageshead th#start").css("width", $('tbody#outagesbody td#start').width());
-$("thead#outageshead th#end").css("width", $('tbody#outagesbody td#end').width());
-$("thead#outageshead th#voltage").css("width", $('tbody#outagesbody td#voltage').width());
-$("thead#outageshead th#linedevice").css("width", $('tbody#outagesbody td#linedevice').width());
-$("thead#outageshead th#station").css("width", $('tbody#outagesbody td#station').width());
-$("thead#outageshead th#district").css("width", $('tbody#outagesbody td#district').width());
-$("thead#outageshead th#status").css("width", $('tbody#outagesbody td#status').width());
-$("thead#outageshead th#points").css("width", $('tbody#outagesbody td#points').width());
-$("thead#outageshead th#switching").css("width", $('tbody#outagesbody td#switching').width());*/
-oTable.fnAdjustColumnSizing();
-
- });
-	
+		$(".table .dataTable").css("width","100px");
+		/*	$("thead#outageshead th#P").css("width", $('tbody#outagesbody td#P').width());
+		$("thead#outageshead th#request").css("width", $('tbody#outagesbody td#request').width());
+		$("thead#outageshead th#start").css("width", $('tbody#outagesbody td#start').width());
+		$("thead#outageshead th#end").css("width", $('tbody#outagesbody td#end').width());
+		$("thead#outageshead th#voltage").css("width", $('tbody#outagesbody td#voltage').width());
+		$("thead#outageshead th#linedevice").css("width", $('tbody#outagesbody td#linedevice').width());
+		$("thead#outageshead th#station").css("width", $('tbody#outagesbody td#station').width());
+		$("thead#outageshead th#district").css("width", $('tbody#outagesbody td#district').width());
+		$("thead#outageshead th#status").css("width", $('tbody#outagesbody td#status').width());
+		$("thead#outageshead th#points").css("width", $('tbody#outagesbody td#points').width());
+		$("thead#outageshead th#switching").css("width", $('tbody#outagesbody td#switching').width());*/
+		oTable.fnAdjustColumnSizing();
+	});
 	
 </script>
 
 <script type="text/javascript">
-$(document).ready(function(){
-$("button.ColVis_Button").addClass("btn");
-$("div.ColVis").attr("align","right");
-});
-
+	$(document).ready(function(){
+		$("button.ColVis_Button").addClass("btn");
+		$("div.ColVis").attr("align","right");
+	});
 </script>
-<script type="text/javascript">
-$(document).ready(function(){
-$("div.dataTables_scrollHead").css("overflow","auto");
-$("div.dataTables_scrollBody").attr("onscroll","scrollHead()");
-$("div.dataTables_scrollHead").wrap('<div id="wrapper" style="overflow:hidden; height:18px" />');
-});
 
-function scrollHead()
-{
-//alert("successful");
-	var top = $("div.dataTables_scrollHead");
-	var bottom = $("div.dataTables_scrollBody");
+<script type="text/javascript">
+	$(document).ready(function(){
+	$("div.dataTables_scrollHead").css("overflow","auto");
+	$("div.dataTables_scrollBody").attr("onscroll","scrollHead()");
+	$("div.dataTables_scrollHead").wrap('<div id="wrapper" style="overflow:hidden; height:18px" />');
+	});
+
+	function scrollHead()
+	{
+		var top = $("div.dataTables_scrollHead");
+		var bottom = $("div.dataTables_scrollBody");
 		top.scrollLeft(bottom.scrollLeft());
-}
+	}
 </script>
-
-
 
 </body>
 </html>

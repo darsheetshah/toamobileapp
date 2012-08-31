@@ -716,8 +716,7 @@ ColReorder.prototype = {
 		
     /* are we resizing a column ? */
     if ($(nTh).css('cursor') == 'col-resize') {         
-      //console.debug(this);
-	  this.s.mouse.startX = e.pageX;
+      this.s.mouse.startX = e.pageX;
       this.s.mouse.startWidth = $(nTh).width();
       this.s.mouse.resizeElem = $(nTh); 
       var nThNext = $(nTh).next();
@@ -730,7 +729,6 @@ ColReorder.prototype = {
 		  //b. Disable Autowidth feature (now the user is in charge of setting column width so keeping this enabled looses changes after operations)
 		  this.s.dt.oFeatures.bAutoWidth = false;
 		  ////////////////////
-		$("table#outages").addClass("successful");
 	}
     else if (this.s.allowReorder) {
       that.dom.resize = null;
@@ -851,36 +849,32 @@ ColReorder.prototype = {
 				for(currentColumnIndex=-1; currentColumnIndex < this.s.dt.aoColumns.length-1 && currentColumnIndex != colResized; currentColumnIndex++){
 					if(this.s.dt.aoColumns[currentColumnIndex+1].bVisible)
 						visibleColumnIndex++;
-						//console.debug(visibleColumnIndex);
 				}
 
-				
+				//************* Added By Darsheet *************//
 				tableHeader=$('div.dataTables_scrollHead', this.s.dt.nTableWrapper)[0];
 				headerHead=$(tableHeader)[0];
-				//console.debug($(headerHead.childNodes[0].childNodes[0].childNodes[0].childNodes[1].childNodes[visibleColumnIndex]).width());
-				
-				
-				
-				
+				//***-***//
 				//Get the scroller's div
 				tableScroller = $('div.dataTables_scrollBody', this.s.dt.nTableWrapper)[0];
-				//console.debug(tableScroller);
+				
+				//***-***//
 				//Get the table
 				scrollingTableHead = $(tableScroller)[0];
-				 
+				//***-***//
+				
 				//Resize the columns
 				//if (moveLength != 0 && !scrollXEnabled){
-				//console.debug("width is: " + this.s.mouse.nextStartWidth);
 				
 				//console.debug($(scrollingTableHead.childNodes[0].childNodes[0].childNodes[1].childNodes[visibleColumnIndex]).width());	//**********			
-				
+				//***-***//
+				//Set the body column width as the header column width
 				$(scrollingTableHead.childNodes[0].childNodes[0].childNodes[1].childNodes[visibleColumnIndex]).width($(headerHead.childNodes[0].childNodes[0].childNodes[0].childNodes[1].childNodes[visibleColumnIndex]).width());
+				//***-**//
 				
-				
-				
-				$($(scrollingTableHead)[0].childNodes[visibleColumnIndex+1]).width(this.s.mouse.nextStartWidth - moveLength);
+				//$($(scrollingTableHead)[0].childNodes[visibleColumnIndex+1]).width(this.s.mouse.nextStartWidth - moveLength);
 				//}
-				$($(scrollingTableHead)[0].childNodes[visibleColumnIndex]).width(this.s.mouse.startWidth + moveLength);
+				//$($(scrollingTableHead)[0].childNodes[visibleColumnIndex]).width(this.s.mouse.startWidth + moveLength);
 				
 				//Resize the table too
 				if(scrollXEnabled)

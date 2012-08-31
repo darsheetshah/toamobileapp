@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
 <head>
 <title> Home </title>
@@ -13,21 +12,54 @@
     <div class="navbar-inner">
         <div class="container">
             <ul class="nav nav-pills">
-            <li> <a href="OutageList.html">Outage Request List</a></li>
-            <li class="active"><a href="NewOutage.html">New Outage Request</a></li>
+				<li> <a href="OutageList.html">Outage Request List</a></li>
+				<li class="active"><a href="NewOutage.html">New Outage Request</a></li>
             </ul>
-            </div>
+        </div>
     </div>
 </div>
 <div class="container-fluid">
     <header>
         <div class="row-fluid">
-         <img src="images/logo.jpg" align="left">
-            <div class="container" align="center">
-                <b>New Outage Request Entry</b>
-            </div>
-        Welcome to TOA. Hope you have a great experience
+			<div class="span5">
+				<img src="images/logo.jpg" align="left">
+			</div>	
+			<div class="span2" align="center">
+                <b>Outage Request Entry</b>
+				<label id="status">RECEIVED</label> 
+			</div>
+			<div class ="span5" align="right">
+				<div class="form-inline">Request # : <label id="request" style="background-color: #c0c0c0;">12-0032</label></div>
+				<div class="form-inline">Created By: <label id="createdBy" style="background-color: #c0c0c0;">Sun Daniel   </label> On: <label style="background-color: #c0c0c0;">08/06/2012 09:30 </label></div>
+			</div>
+		</div>
     </header>
+	
+	<div class = "row-fluid form-inline">
+		<div class = "span3">
+		Sched Start : <label id="schedStart" style="background-color: #c0c0c0;">08/30/2012 08:00</label>
+		</div>
+		<div class = "span3">
+		Sched End : <label id="schedEnd" style="background-color: #c0c0c0;">08/30/2012 21:00 </label>
+		</div>
+		<div class= "span3">
+		Day(s) : <label id = "days" style="background-color: #c0c0c0;"> Monday-Monday </label>
+		</div>
+		<div class="span3" align="right">
+		<label> Schedule Profile: </label>
+				<select id = "profile" class="input-medium">
+					<option selected="selected" id="continuous"> Continuous </option>
+					<option id = "daily"> Daily </option>
+					<option id = "weeklymf"> Weekly (Mon-Fri) </option>
+					<option id = "weeklyms"> Weekly (Mon-Sat) </option>
+					<option id = "weeklymt"> Weekly (Mon-Thu) </option>
+					<option id = "weeklytf"> Weekly (Tue-Fri) </option>
+				</select>
+ 		</div>	
+	</div>
+</div>
+<div class="container-fluid" style="border:1px solid gray; height:25px">
+
 </div>
 </body>
 </html>

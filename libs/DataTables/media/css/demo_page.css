@@ -73,7 +73,7 @@
 }
 
 #dt_example a:hover {
-	text-decoration: underline;
+	
 }
 
 #dt_example ul {
@@ -101,8 +101,6 @@
 	width: 100%;
 	overflow: auto;
 }
-
-
 
 thead#outageshead th#P{
 width : 3%;
